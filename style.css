@@ -24,8 +24,8 @@ body {
     position: fixed;
     width: 180px;
     height: 50px;
-    top: 100px;
-    left: 40px;
+    bottom: 20px;
+    right: 20px;
     border: none;
     background-color: var(--secondary-color);
     color: var(--background-dark);
@@ -34,6 +34,8 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 0 #b18904;
     transition: all 0.2s;
+    z-index: 100;
+    font-size: 14px;
 }
 
 #audio:hover {

@@ -14,6 +14,7 @@ let isplaying = 0;
 let audbut = document.getElementById('audio');
 let gamePaused = false;
 let gameRunning = true;
+let gameEnded = false;
 
 // Mobile controls
 const btnLeft = document.getElementById('btn-left');
@@ -44,6 +45,13 @@ function audioplay() {
 window.addEventListener('resize', () => {
     gamespace.height = window.innerHeight;
     gamespace.width = window.innerWidth;
+});
+
+// Event listener for Enter key to restart game when game over
+document.addEventListener('keydown', (e) => {
+    if (gameEnded && e.key === 'Enter') {
+        location.reload();
+    }
 });
 
 class Character {
@@ -306,6 +314,7 @@ function Move() {
             , new Coin({ x: 8485, y: 515 }), new Coin({ x: 8755, y: 515 }), new Coin({ x: 8985, y: 415 }), new Coin({ x: 9255, y: 615 }), new Coin({ x: 10055, y: 615 }), new Coin({ x: 10255, y: 515 }), new Coin({ x: 10055, y: 415 }), new Coin({ x: 10455, y: 615 }),
         new Coin({ x: 10455, y: 415 }), new Coin({ x: 10655, y: 515 }), new Coin({ x: 11705, y: 565 }), new Coin({ x: 11955, y: 665 }), new Coin({ x: 12855, y: 565 }), new Coin({ x: 13055, y: 715 }), new Coin({ x: 13255, y: 565 }), new Coin({ x: 13255, y: 565 }),
         new Coin({ x: 13055, y: 465 }), new Coin({ x: 13255, y: 565 }), new Coin({ x: 13555, y: 665 }), new Coin({ x: 13855, y: 715 }), new Coin({ x: 13960, y: 715 })];
+
         enemies = []
         boolrightrun = true;
         boolleftrun = true;
@@ -516,6 +525,7 @@ function updatescore(n) {
 
 function gameover() {
     gameRunning = false;
+    gameEnded = true;
     cancelAnimationFrame(rafm);
     var gameover = setTimeout(() => gameoverscreen(gameover), 1000);
     clearInterval(updatetime);
