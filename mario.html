@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario</title>
+    <link rel="icon" href="images/icon.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas></canvas>
+    <div id="container">
+        <div id="score"></div>
+        <div id="timer"></div>
+        <div id="lives"><img src="images/icon.png" alt="lives:" id="liveicon"><p id="nofl"></p></div>
+    </div>
+    
+    <button id="audio" onclick="audioplay()">MUSIC ON</button>
+    
+    <div id="mobile-controls" class="hide-on-desktop">
+        <div class="direction-buttons">
+            <button id="btn-left"><span>←</span></button>
+            <button id="btn-right"><span>→</span></button>
+        </div>
+        <div class="jump-button">
+            <button id="btn-jump"><span>JUMP</span></button>
+        </div>
+    </div>
+    
+    <div id="gameover">
+        <p>GAME<br>OVER</p>
+        <div class="final-score-container">
+            <p id="final-score">SCORE: 0</p>
+        </div>
+        <p id="restart">Press Ctrl + R to restart</p>
+        <button id="retry-btn" onclick="location.reload()">PLAY AGAIN</button>
+    </div>
+    
+    <div id="pause-menu">
+        <div class="pause-content">
+            <h2>GAME PAUSED</h2>
+            <button id="resume-btn">RESUME</button>
+            <button id="restart-btn" onclick="location.reload()">RESTART</button>
+            <button id="main-menu-btn" onclick="window.location.href='index.html'">MAIN MENU</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
