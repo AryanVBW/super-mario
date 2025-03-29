@@ -10,6 +10,7 @@ let basepos;
 const audio = new Audio('audio/mariotheme.mp3');
 const coinaudio = new Audio('audio/coin.mp3');
 const jumpSound = new Audio('audio/jump.mp3');
+const deathSound = new Audio('audio/super-mario-death-sound-sound-effect.mp3');
 let isplaying = 0;
 let audbut = document.getElementById('audio');
 let gamePaused = false;
@@ -527,6 +528,7 @@ function gameover() {
     gameRunning = false;
     gameEnded = true;
     cancelAnimationFrame(rafm);
+    deathSound.play(); // Play death sound when game ends
     var gameover = setTimeout(() => gameoverscreen(gameover), 1000);
     clearInterval(updatetime);
 }
