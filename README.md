@@ -43,8 +43,7 @@ A web-based Super Mario platformer game created using HTML5 Canvas, CSS, and Jav
 
 ### Audio
 - Mario Jump Sound: [MyInstants](https://www.myinstants.com/en/instant/mario-jump/)
-- Background Music: Classic Mario Theme
-- Coin Collection Sound: Classic Mario Coin Sound
+- Background Music: Classic Mario Theme and Coin Collection Sound: Classic Mario Coin Sound all from  https://www.myinstants.com/en/search/?name=Super+Mario
 
 ### Images
 - Background Wallpaper: [DeviantArt by RubyChu96](https://www.deviantart.com/rubychu96/art/Wallpaper-Super-Mario-Galaxy-Series-925984739)
